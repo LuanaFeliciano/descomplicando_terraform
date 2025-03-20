@@ -59,7 +59,7 @@ O Terraform carrega automaticamente o arquivo `terraform.tfvars` (se presente no
 Além do arquivo `terraform.tfvars`, o Terraform carrega automaticamente qualquer arquivo que termine com `.auto.tfvars`. Isso permite que você separe variáveis em diferentes arquivos de forma automatizada.
 
 ### 3. **Arquivos com sufixo `.tfvars`**
-Você pode criar arquivos personalizados com qualquer nome seguido por .tfvars e carregá-los usando a flag -var-file nos comandos Terraform (por exemplo, terraform plan -var-file="custom.tfvars"). Esses arquivos não são carregados automaticamente, mas podemos especificá-los manualmente.
+Você pode criar arquivos personalizados com qualquer nome seguido por .tfvars e carregá-los usando a flag `-var-file` nos comandos Terraform (por exemplo, `terraform plan -var-file="custom.tfvars"`). Esses arquivos não são carregados automaticamente, mas podemos especificá-los manualmente.
 
 
 
