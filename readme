@@ -1,4 +1,3 @@
-
 ## Autenticação com a AWS usando o Terraform
 
 O Terraform requer credenciais da AWS para criar e gerenciar recursos na nuvem. Existem diferentes formas de fornecer essas credenciais ao Terraform. Abaixo, explicamos como exportar as credenciais da AWS como variáveis de ambiente ou usar um arquivo de credenciais.
@@ -6,14 +5,11 @@ O Terraform requer credenciais da AWS para criar e gerenciar recursos na nuvem. 
 ### 1. Exportar variáveis de ambiente no Linux/Mac
 Antes de executar qualquer comando Terraform, exporte as variáveis de ambiente no terminal:
 
-```bash
-export AWS_ACCESS_KEY_ID="your-access-key-id"
-export AWS_SECRET_ACCESS_KEY="your-secret-access-key"
+export AWS_ACCESS_KEY_ID="your-access-key-id"  
+export AWS_SECRET_ACCESS_KEY="your-secret-access-key"  
 export AWS_DEFAULT_REGION="us-east-2"
-```
 
 ## Comandos Terraform para Gerar, Aplicar e Destruir Planos
-
 
 ### 1. `terraform init -upgrade`
 - **Descrição**: O comando `terraform init -upgrade` inicializa o diretório de trabalho, mas também força a atualização dos plugins e módulos para as versões mais recentes.
@@ -45,9 +41,6 @@ export AWS_DEFAULT_REGION="us-east-2"
 - **Uso**: Use quando você não precisar mais da infraestrutura criada ou quando quiser limpar os recursos provisionados.
 - **Exemplo**: Execute `terraform destroy` para destruir todos os recursos ou `terraform destroy -auto-approve` para destruir sem confirmação interativa.
 
-
-
-
 ## Formas de Fornecer Variáveis no Terraform
 
 O Terraform oferece várias maneiras de fornecer variáveis para a execução de seus comandos. Abaixo, explicamos como você pode configurar variáveis de diferentes fontes e como o Terraform irá carregá-las automaticamente.
@@ -60,6 +53,3 @@ Além do arquivo `terraform.tfvars`, o Terraform carrega automaticamente qualque
 
 ### 3. **Arquivos com sufixo `.tfvars`**
 Você pode criar arquivos personalizados com qualquer nome seguido por .tfvars e carregá-los usando a flag -var-file nos comandos Terraform (por exemplo, terraform plan -var-file="custom.tfvars"). Esses arquivos não são carregados automaticamente, mas podemos especificá-los manualmente.
-
-
-
